@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "ingredient",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "groups_ingredient_gs",
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "unit": {
+      "enum": [
+        "tbsps",
+        "tsps",
+        "cps",
+        "ozs",
+        "lbs",
+        "gs"
+      ],
+      "type": "enumeration"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

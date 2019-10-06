@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "recipes",
+  "info": {
+    "name": "recipe",
+    "description": "A family recipe"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "submitted_by": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "Instructions": {
+      "type": "richtext"
+    },
+    "ingredients": {
+      "group": "ingredient",
+      "repeatable": true,
+      "type": "group"
+    },
+    "tags": {
+      "group": "tag",
+      "repeatable": true,
+      "type": "group"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
